@@ -1,0 +1,101 @@
+import java.util.Scanner;
+
+public class PiramideCaracteres {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar el número de filas
+        System.out.print("Ingrese el número de filas: ");
+        int filas = scanner.nextInt();
+
+        // Solicitar el carácter a utilizar
+        System.out.print("Ingrese el carácter a utilizar: ");
+        char caracter = scanner.next().charAt(0);
+
+        // Generar la estructura
+        for (int i = 1; i <= filas; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(caracter);
+            }
+            System.out.println(); 
+        }
+
+        scanner.close();
+    }
+}
+------------------------------------------------------------------------
+
+public class NumerosIncrementales {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) { 
+            for (int j = 1; j <= i; j++) { 
+                System.out.print(j);
+            }
+            System.out.println(); 
+    }
+}
+
+------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class ComprobarNumero {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar número entero al usuario
+        System.out.print("Ingrese un número entero: ");
+        int numero = scanner.nextInt();
+
+        // Verificar que el número es positivo y distinto de cero
+        if (numero > 0) {
+            int cantidad = String.valueOf(numero).length(); 
+
+            if (cantidad == 2) {
+                if (numero % 2 == 0) {
+                    System.out.println("El número de dos cifras es par.");
+                } else {
+                    System.out.println("El número de dos cifras es impar.");
+                }
+            } else if (cantidad == 3) {
+                System.out.println("El resto de dividir " + numero + " entre 2 es: " + (numero % 2));
+            } else {
+                System.out.println("El número es positivo pero no cumple con los criterios de dos o tres cifras.");
+            }
+        } else {
+            System.out.println("Error: Debe ingresar un número entero positivo y distinto de cero.");
+        }
+
+        scanner.close();
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class VerificarNumero {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.print("Ingrese un número entero: ");
+        int numero = scanner.nextInt();
+
+
+        if (!(numero <= 0)) { 
+
+            if (numero % 2 == 0) {
+                System.out.println("El número " + numero + " es par.");
+            } else {
+                System.out.println("El número " + numero + " es impar.");
+            }
+        } else {
+
+            System.out.println("Error: Debe ingresar un número positivo distinto de cero.");
+        }
+
+        scanner.close();
+    }
+}
+

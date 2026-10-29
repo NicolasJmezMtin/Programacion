@@ -1,0 +1,96 @@
+public class NumerosDeCincoEnCinco {
+    public static void main(String[] args) {
+        System.out.println("Números del 1 al 1000, de 5 en 5:");
+
+        for (int i = 1; i <= 1000; i += 5) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+------------------------------------------------------------------------
+
+public class DecrementoDiez {
+    public static void main(String[] args) {
+        System.out.println("Números del 10,000 al 1, con decremento de 10:");
+
+        for (int i = 10000; i >= 1; i -= 10) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+----------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class ImprimirNombre {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese su nombre: ");
+        String nombre = scanner.nextLine();
+
+        System.out.print("Ingrese cuántas veces desea imprimir su nombre: ");
+        int veces = scanner.nextInt();
+
+        for (int i = 0; i < veces; i++) {
+            System.out.println((i + 1) + ". " + nombre);
+        }
+
+        scanner.close();
+    }
+}
+
+----------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+
+public class PedirNumeros {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+
+        System.out.println("Ingrese números (escriba 0 para finalizar):");
+
+        do {
+            System.out.print("Número: ");
+            numero = scanner.nextInt();
+        } while (numero != 0); 
+
+        System.out.println("Programa finalizado.");
+        scanner.close();
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+public class NumerosDoWhile {
+    public static void main(String[] args) {
+        int i = 1; // Inicialización
+
+        System.out.println("Números del 1 al 100 con do-while:");
+
+        do {
+            System.out.print(i + " ");
+            i++; // Incremento
+        } while (i <= 100); 
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------
+
+public class NumerosWhile {
+    public static void main(String[] args) {
+        int i = 1; // Inicialización
+
+        System.out.println("Números del 1 al 100 con while:");
+
+        while (i <= 100) {
+            System.out.print(i + " ");
+            i++; // Incremento
+        }
+    }
+}
+
+
